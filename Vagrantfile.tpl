@@ -5,11 +5,11 @@
 Vagrant.configure("2") do |config|
   config.vm.box = "ubuntu/trusty64"
   config.vm.box_check_update = false
-  config.vm.hostname = "storyboardshare.box"
+  config.vm.hostname = "frontendApp.box"
   config.vm.provision "shell", inline: $sytem_script
   config.vm.provision "shell", inline: $user_script, privileged: false
 
-  config.vm.synced_folder '{{ path.working }}', "/home/vagrant/storyboardShare",
+  config.vm.synced_folder '{{ path.working }}', "/home/vagrant/frontendApp",
                           owner: "vagrant", group: "vagrant"
 
   config.ssh.forward_agent = true
