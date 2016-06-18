@@ -1,0 +1,8 @@
+application = {
+  name = "storyboardShare"
+  type = "custom"
+}
+
+customization = {
+  dev_vagrantfile = "./Vagrantfile.tpl"
+}
